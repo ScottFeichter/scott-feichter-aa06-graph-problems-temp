@@ -18,7 +18,7 @@ describe('getNeighbors', () => {
       [0, 0, 0],
     ]
   });
-  
+
   it('will not count invalid neighbors', () => {
     expect(getNeighbors(1, 1, matrix2)).to.have.length(0);
   });
