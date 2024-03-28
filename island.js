@@ -41,7 +41,8 @@ function islandSize(row, col, graph) {
   // While the stack is not empty,
   while (s.length) {
     // Pop the first node
-    const curr = s.pop;
+    const curr = s.pop();
+
 
     // DO THE THING (increment size by 1)
     size++;
@@ -57,15 +58,13 @@ function islandSize(row, col, graph) {
         // and mark them as visited
         v.add(`${neigh[0]},${neigh[1]}`);
       }
-      console.log("s: ", s);
-
     }
   }
   // HINT: This is what your helper function `getNeighbors` is for
   // HINT: Remember, you're storing your visited nodes as strings!
 
   // return size
-  console.log("size: ", size);
+
   return size;
 }
 
